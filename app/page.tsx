@@ -1,101 +1,77 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Code2, Database, Layout } from "lucide-react";
+import { EducationCard } from "@/components/widgets/education-card";
+import { SocialCard } from "@/components/widgets/social-card";
+import { TimeWidget } from "@/components/widgets/time-widget";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="min-h-screen p-4 md:p-8 bg-zinc-50 dark:bg-black flex items-center justify-center">
+      <div className="max-w-5xl w-full mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* About Me - Big Box (2x2) */}
+          <div className="md:col-span-2 md:row-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-between relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Code2 className="w-32 h-32" />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
+                Hola, soy <span className="text-blue-600">Adhca</span>.
+              </h1>
+              <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Soy estudiante de primer año apasionado por la lógica y React.
+                Construyendo el futuro, un componente a la vez.
+              </p>
+            </div>
+            <div className="flex gap-2 mt-4">
+              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">TypeScript</div>
+              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">Next.js</div>
+              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">Tailwind</div>
+            </div>
+          </div>
+
+          {/* Education Card */}
+          <div className="md:col-span-2 md:row-span-1">
+            <EducationCard />
+          </div>
+
+          {/* Social Card */}
+          <div className="md:col-span-1 md:row-span-1">
+            <SocialCard />
+          </div>
+
+          {/* Time Widget */}
+          <div className="md:col-span-1 md:row-span-1">
+            <TimeWidget />
+          </div>
+
+          {/* Roadmap Link */}
+          <Link
+            href="/roadmap"
+            className="md:col-span-2 md:row-span-1 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-6 flex flex-col justify-between text-white group hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="flex justify-between items-start">
+              <div className="p-2 bg-white/20 rounded-full backdrop-blur-sm">
+                <Layout className="w-6 h-6" />
+              </div>
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">Mi Roadmap</h3>
+              <p className="text-blue-100 text-sm">Ver mi línea de tiempo de aprendizaje</p>
+            </div>
+          </Link>
+
+          {/* Extra Filler / Tech Stack or Quote */}
+          <div className="md:col-span-2 md:row-span-1 bg-zinc-900 dark:bg-zinc-100 rounded-3xl p-6 flex items-center justify-center text-center">
+            <p className="text-zinc-100 dark:text-zinc-900 font-medium text-lg">
+              "La simplicidad es la máxima sofisticación."
+            </p>
+          </div>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
