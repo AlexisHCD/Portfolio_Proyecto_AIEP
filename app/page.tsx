@@ -6,7 +6,7 @@ import { TimeWidget } from "@/components/widgets/time-widget";
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-4 md:p-8 bg-zinc-50 dark:bg-black flex items-center justify-center">
+    <main className="min-h-screen p-4 md:p-8 flex items-center justify-center">
       <div className="max-w-5xl w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
 

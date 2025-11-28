@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function RoadmapPage() {
     return (
-        <main className="min-h-screen p-8 bg-zinc-50 dark:bg-black">
+        <main className="min-h-screen p-8">
             <div className="max-w-4xl mx-auto">
                 <div className="mb-8">
                     <Link
