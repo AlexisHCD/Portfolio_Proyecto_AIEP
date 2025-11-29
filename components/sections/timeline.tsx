@@ -2,28 +2,28 @@ import { CheckCircle2, Circle } from "lucide-react";
 
 const steps = [
     {
-        title: "Inicio del Viaje",
-        date: "Marzo 2024",
+        title: "Comienzo carrera de Programación y Analisis de Sistemas",
+        date: "Marzo 2025",
         description: "Comienzo de la carrera de Análisis de Sistemas.",
         status: "completed",
     },
     {
         title: "Fundamentos de Programación",
-        date: "Junio 2024",
+        date: "Abril 2025",
         description: "Dominio de lógica, algoritmos y estructuras de datos básicas.",
         status: "completed",
     },
     {
-        title: "Desarrollo Web Moderno",
-        date: "Actualidad",
+        title: "Introducción SQL y Analisis de Sistemas",
+        date: "Mayo 2025",
         description: "Aprendiendo Next.js, React y Tailwind CSS en profundidad.",
-        status: "current",
+        status: "completed",
     },
     {
-        title: "Proyecto Final de Año",
-        date: "Diciembre 2024",
+        title: "Taller de Programación C#",
+        date: "Agosto 2025",
         description: "Desarrollo de una aplicación completa full-stack.",
-        status: "upcoming",
+        status: "completed",
     },
 ];
 
