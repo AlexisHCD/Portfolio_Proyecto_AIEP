@@ -1,7 +1,7 @@
 import { getNowPlaying } from "@/lib/spotify";
 import { NextResponse } from "next/server";
 
-export const runtime = "edge";
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
     const response = await getNowPlaying();
@@ -24,12 +24,19 @@ export async function GET() {
     const albumImageUrl = song.item.album.images[0].url;
     const songUrl = song.item.external_urls.spotify;
 
-    return NextResponse.json({
-        album,
-        albumImageUrl,
-        artist,
-        isPlaying,
-        songUrl,
-        title,
-    });
+    return NextResponse.json(
+        {
+            album,
+            albumImageUrl,
+            artist,
+            isPlaying,
+            songUrl,
+            title,
+        },
+        {
+            headers: {
+                "Cache-Control": "public, s-maxage=0, must-revalidate",
+            },
+        }
+    );
 }
