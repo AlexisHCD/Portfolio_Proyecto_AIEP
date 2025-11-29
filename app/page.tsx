@@ -3,6 +3,7 @@ import { ArrowRight, Code2, Database, Layout } from "lucide-react";
 import { EducationCard } from "@/components/widgets/education-card";
 import { SocialCard } from "@/components/widgets/social-card";
 import { TimeWidget } from "@/components/widgets/time-widget";
+import { SpotifyCard } from "@/components/widgets/spotify-card";
 
 export default function Home() {
   return (
@@ -47,6 +48,12 @@ export default function Home() {
           </div>
 
           {/* Roadmap Link */}
+          {/* Spotify Card */}
+          <div className="md:col-span-2 md:row-span-1">
+            <SpotifyCard />
+          </div>
+
+          {/* Roadmap Link */}
           <Link
             href="/roadmap"
             className="md:col-span-2 md:row-span-1 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-6 flex flex-col justify-between text-white group hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
@@ -62,13 +69,6 @@ export default function Home() {
               <p className="text-blue-100 text-sm">Ver mi línea de tiempo de aprendizaje</p>
             </div>
           </Link>
-
-          {/* Extra Filler / Tech Stack or Quote */}
-          <div className="md:col-span-2 md:row-span-1 bg-zinc-900 dark:bg-zinc-100 rounded-3xl p-6 flex items-center justify-center text-center">
-            <p className="text-zinc-100 dark:text-zinc-900 font-medium text-lg">
-              "La simplicidad es la máxima sofisticación."
-            </p>
-          </div>
 
         </div>
       </div>
