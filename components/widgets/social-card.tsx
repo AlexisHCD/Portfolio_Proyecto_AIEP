@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Twitter } from "lucide-react"; // Lucide uses 'Twitter' for the bird, but X is usually a custom SVG or just an X. I'll use an X icon or similar.
 // Actually, Lucide has an 'X' icon but it might be the close icon. The user asked for "X (Twitter)".
 // I'll use the 'X' icon from Lucide if available, or a custom SVG path for the X logo to be accurate.
 // Let's stick to Lucide 'Twitter' for now as a placeholder or 'X' if I can find it, but standard Lucide 'X' is a cross.

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Code2, Database, Layout } from "lucide-react";
+import { ArrowRight, Code2, Layout } from "lucide-react";
 import { EducationCard } from "@/components/widgets/education-card";
 import { SocialCard } from "@/components/widgets/social-card";
 import { TimeWidget } from "@/components/widgets/time-widget";

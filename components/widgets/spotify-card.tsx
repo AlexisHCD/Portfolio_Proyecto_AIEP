@@ -1,7 +1,7 @@
 "use client";
 
 import useSWR from "swr";
-import { Music, ExternalLink } from "lucide-react";
+import { Music } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
