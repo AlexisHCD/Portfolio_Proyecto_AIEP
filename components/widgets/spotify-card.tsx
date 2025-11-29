@@ -9,10 +9,11 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export const SpotifyCard = () => {
     const { data } = useSWR("/api/now-playing", fetcher, {
-        refreshInterval: 30000, // Refresh every 30 seconds
+        refreshInterval: 30000,
     });
 
     const isPlaying = data?.isPlaying;
+    const albumImageUrl = data?.albumImageUrl;
 
     return (
         <Link
@@ -20,6 +21,17 @@ export const SpotifyCard = () => {
             target="_blank"
             className="flex flex-col justify-between h-full bg-[#1DB954] dark:bg-[#1DB954] rounded-3xl p-6 text-white group relative overflow-hidden"
         >
+            {/* Album Art Background */}
+            {isPlaying && albumImageUrl && (
+                <>
+                    <div
+                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                        style={{ backgroundImage: `url(${albumImageUrl})` }}
+                    />
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] transition-opacity duration-300 group-hover:bg-black/40" />
+                </>
+            )}
+
             <div className="flex justify-between items-start z-10">
                 <div className="p-2 bg-white/20 rounded-full backdrop-blur-sm">
                     <Music className="w-6 h-6" />
@@ -54,10 +66,12 @@ export const SpotifyCard = () => {
                 </p>
             </div>
 
-            {/* Background Effect */}
-            <div className="absolute -bottom-4 -right-4 opacity-20 rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500">
-                <Music className="w-32 h-32" />
-            </div>
+            {/* Fallback Background Effect (only if not playing) */}
+            {!isPlaying && (
+                <div className="absolute -bottom-4 -right-4 opacity-20 rotate-12 group-hover:rotate-0 group-hover:scale-110 transition-all duration-500">
+                    <Music className="w-32 h-32" />
+                </div>
+            )}
         </Link>
     );
 };
