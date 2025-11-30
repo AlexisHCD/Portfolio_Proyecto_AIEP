@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Download, FileText } from "lucide-react";
+import { Download } from "lucide-react";
 
 export const DownloadCV = () => {
     return (

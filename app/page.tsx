@@ -6,6 +6,8 @@ import { TimeWidget } from "@/components/widgets/time-widget";
 import { SpotifyCard } from "@/components/widgets/spotify-card";
 import { DownloadCV } from "@/components/widgets/download-cv";
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8 flex items-center justify-center">
@@ -14,13 +16,14 @@ export default function Home() {
         <div className="flex justify-center mb-12">
           <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-zinc-800 shadow-2xl ring-1 ring-zinc-900/5 dark:ring-zinc-100/10 group">
             {/* Placeholder Image - Using GitHub avatar as it's available and relevant */}
-            <img
+            <Image
               src="https://github.com/AlexisHCD.png"
               alt="Foto de Perfil"
-              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+              fill
+              className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
             {/* Overlay for elegance */}
-            <div className="absolute inset-0 ring-inset ring-1 ring-black/10 dark:ring-white/10 rounded-full" />
+            <div className="absolute inset-0 ring-inset ring-1 ring-black/10 dark:ring-white/10 rounded-full z-10" />
           </div>
         </div>
 
