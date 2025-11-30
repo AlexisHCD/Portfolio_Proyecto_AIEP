@@ -16,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio de Adhca | Analista Programador",
-  description: "Portafolio personal de un estudiante de Análisis de Sistemas apasionado por React y Next.js.",
+  title: "Alexis Hernández Camus | AIEP",
+  description: "Portafolio personal de Alexis Hernández Camus, estudiante de programación y análisis de sistemas en AIEP San Antonio",
 };
 
 export default function RootLayout({

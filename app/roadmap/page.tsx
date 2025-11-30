@@ -14,7 +14,7 @@ export default function RoadmapPage() {
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Volver al inicio
                     </Link>
-                    <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">Estudiando para ser Desarrollador Full Stack</h1>
+                    <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">Programación y Análisis de Sistemas</h1>
                     <p className="text-zinc-600 dark:text-zinc-400 mt-2">
                         Mi camino de aprendizaje.
                     </p>

@@ -33,13 +33,13 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
 
-          {/* About Me - Compact Version (since we have Hero) */}
+          {/* About Me - Compact Version */}
           <div className="md:col-span-2 md:row-span-1 bg-white dark:bg-zinc-900 rounded-3xl p-6 border border-zinc-200 dark:border-zinc-800 shadow-sm flex flex-col justify-center relative overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
               <Code2 className="w-24 h-24" />
             </div>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed relative z-10">
-              Apasionado por el desarrollo web, la música y la tecnología. Siempre aprendiendo y buscando crear experiencias digitales únicas.
+              Soy estudiante de Programación y Análisis de Sistemas en AIEP San Antonio, me encanta la tecnologia y saber como funcionan las cosas, buscando una carrera como Programador Fullstack o Analista de Sistemas, en mis tiempos libres me gusta cocinar y escuchar musica.
             </p>
           </div>
 

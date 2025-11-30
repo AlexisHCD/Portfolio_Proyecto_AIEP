@@ -37,7 +37,7 @@ export default function ContactPage() {
         <main className="min-h-screen p-8 flex flex-col items-center justify-center">
             <div className="max-w-2xl w-full">
                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Contacto</h1>
+                    <h1 className="text-5xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">Contacto</h1>
                     <p className="text-zinc-600 dark:text-zinc-400 text-lg">
                         ¿Tienes alguna pregunta o propuesta? No dudes en contactarme.
                     </p>
@@ -67,7 +67,7 @@ export default function ContactPage() {
 
                 <div className="mt-12 text-center">
                     <p className="text-zinc-500 dark:text-zinc-500 text-sm">
-                        También puedes encontrarme en el instituto o programando en algún café.
+                        También puedes encontrarme en el instituto.
                     </p>
                 </div>
             </div>
