@@ -16,14 +16,32 @@ const steps = [
     {
         title: "Introducción SQL y Analisis de Sistemas",
         date: "Mayo 2025",
-        description: "Aprendiendo Next.js, React y Tailwind CSS en profundidad.",
+        description: "Aprendiendo fundamentos de SQL y análisis de sistemas.",
         status: "completed",
     },
     {
-        title: "Taller de Programación C#",
+        title: "Taller de Programación C# .NET",
         date: "Agosto 2025",
-        description: "Desarrollo de una aplicación completa full-stack.",
+        description: "Desarrollo de una aplicación completa full-stack con C# .NET.",
         status: "completed",
+    },
+    {
+        title: "Desarrollo Web HTML, CSS y JavaScript",
+        date: "Noviembre 2025",
+        description: "Fundamentos de HTML, CSS y Introducción a Front-end Frameworks.",
+        status: "current",
+    },
+    {
+        title: "Metodologias de Desarrollo y Programación Segura ",
+        date: "Diciembre 2025",
+        description: "Introducción a metodologías de desarrollo y programación segura.",
+        status: "current",
+    },
+    {
+        title: "Taller de Aplicaciónes Moviles",
+        date: "Diciembre 2025",
+        description: "Introducción a metodologías de desarrollo y programación segura.",
+        status: "upcoming",
     },
 ];
 
