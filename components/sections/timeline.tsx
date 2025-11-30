@@ -2,9 +2,9 @@ import { CheckCircle2, Circle } from "lucide-react";
 
 const steps = [
     {
-        title: "Comienzo carrera de Programación y Analisis de Sistemas",
+        title: "Programación y Analisis de Sistemas AIEP 2025",
         date: "Marzo 2025",
-        description: "Comienzo de la carrera de Análisis de Sistemas.",
+        description: "Comienzo de la carrera de Programación y Analisis de Sistemas.",
         status: "completed",
     },
     {
@@ -22,13 +22,13 @@ const steps = [
     {
         title: "Taller de Programación C# .NET",
         date: "Agosto 2025",
-        description: "Desarrollo de una aplicación completa full-stack con C# .NET.",
+        description: "Desarrollo de una aplicación full-stack con C# .NET.",
         status: "completed",
     },
     {
         title: "Desarrollo Web HTML, CSS y JavaScript",
         date: "Noviembre 2025",
-        description: "Fundamentos de HTML, CSS y Introducción a Front-end Frameworks.",
+        description: "Fundamentos de HTML, CSS y Frameworks.",
         status: "current",
     },
     {
@@ -38,9 +38,51 @@ const steps = [
         status: "current",
     },
     {
-        title: "Taller de Aplicaciónes Moviles",
-        date: "Diciembre 2025",
-        description: "Introducción a metodologías de desarrollo y programación segura.",
+        title: "Taller de Aplicaciónes Para Internet",
+        date: "Marzo 2026",
+        description: "Desarrollo de aplicaciones para internet.",
+        status: "upcoming",
+    },
+    {
+        title: "Ingles y Sostenibilidad Organizacional",
+        date: "Mayo 2026",
+        description: "Ingles basico y desarrollo sostenible.",
+        status: "upcoming",
+    },
+    {
+        title: "Certificado Especialidad I y Modelamiento de Negocios",
+        date: "Junio 2026",
+        description: "Tecnologias aplicadas",
+        status: "upcoming",
+    },
+    {
+        title: "Taller de Aplicaciones Móviles",
+        date: "Agosto 2026",
+        description: "Desarrollo en Android Studio",
+        status: "upcoming",
+    },
+    {
+        title: "Taller de Testing y Calidad de Software",
+        date: "Agosto 2026",
+        description: "Pruebas de software y calidad del software.",
+        status: "upcoming",
+    },
+    {
+        title: "Taller de Especialidad II y Ingles Inicial II",
+        date: "Septiembre 2026",
+        description: "Segundo taller de especialidad",
+        status: "upcoming",
+    },
+    {
+        title: "Certificado Especialidad II",
+        date: "Octubre 2026",
+        description: "Modulo Final I",
+        status: "upcoming",
+    },
+    {
+        title: "Taller de Marca Personal",
+        date: "Noviembre 2026",
+        description: "Modulo Final II",
         status: "upcoming",
     },
 ];
