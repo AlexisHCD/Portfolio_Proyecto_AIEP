@@ -48,20 +48,32 @@ export default function Home() {
             <EducationCard />
           </div>
 
-          {/* Social Card */}
+          {/* GitHub Card */}
           <div className="md:col-span-1 md:row-span-1">
-            <SocialCard />
+            <SocialCard
+              type="github"
+              username="@AlexisHCD"
+              url="https://github.com/AlexisHCD"
+            />
           </div>
 
-          {/* Time Widget */}
+          {/* LinkedIn Card */}
           <div className="md:col-span-1 md:row-span-1">
-            <TimeWidget />
+            <SocialCard
+              type="linkedin"
+              username="Alexis Hernández"
+              url="https://www.linkedin.com/in/alexis-hernández-2b3017367"
+            />
           </div>
 
-          {/* Roadmap Link */}
           {/* Spotify Card */}
           <div className="md:col-span-1 md:row-span-2">
             <SpotifyCard />
+          </div>
+
+          {/* Time Widget */}
+          <div className="md:col-span-1 md:row-span-2">
+            <TimeWidget />
           </div>
 
           {/* Roadmap Link */}
