@@ -4,6 +4,7 @@ import { EducationCard } from "@/components/widgets/education-card";
 import { SocialCard } from "@/components/widgets/social-card";
 import { TimeWidget } from "@/components/widgets/time-widget";
 import { SpotifyCard } from "@/components/widgets/spotify-card";
+import { DownloadCV } from "@/components/widgets/download-cv";
 
 export default function Home() {
   return (
@@ -84,6 +85,13 @@ export default function Home() {
             </div>
           </Link>
 
+        </div>
+
+        {/* CV Download Button */}
+        <div className="mt-8 flex justify-center">
+          <div className="w-full md:w-auto md:min-w-[300px]">
+            <DownloadCV />
+          </div>
         </div>
       </div>
     </main>
