@@ -60,7 +60,7 @@ export default function Home() {
 
           {/* Roadmap Link */}
           {/* Spotify Card */}
-          <div className="md:col-span-2 md:row-span-1">
+          <div className="md:col-span-1 md:row-span-2">
             <SpotifyCard />
           </div>
 
