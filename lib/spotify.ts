@@ -9,6 +9,11 @@ const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 
 const getAccessToken = async () => {
+  if (!client_id || !client_secret || !refresh_token) {
+    console.error("Missing Spotify Environment Variables");
+    return { error: "Missing Environment Variables" };
+  }
+
   const response = await fetch(TOKEN_ENDPOINT, {
     method: "POST",
     headers: {
@@ -25,7 +30,14 @@ const getAccessToken = async () => {
 };
 
 export const getNowPlaying = async () => {
-  const { access_token } = await getAccessToken();
+  const tokenData = await getAccessToken();
+
+  if (tokenData.error || !tokenData.access_token) {
+    console.error("Failed to get access token:", tokenData);
+    return { status: 401, text: () => Promise.resolve(JSON.stringify(tokenData)) };
+  }
+
+  const { access_token } = tokenData;
 
   return fetch(NOW_PLAYING_ENDPOINT, {
     headers: {

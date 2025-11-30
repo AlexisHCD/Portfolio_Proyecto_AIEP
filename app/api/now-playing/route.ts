@@ -7,12 +7,14 @@ export async function GET() {
     const response = await getNowPlaying();
 
     if (response.status === 204 || response.status > 400) {
-        return NextResponse.json({ isPlaying: false });
+        const errorText = await response.text();
+        console.error("Spotify API Error:", response.status, errorText);
+        return NextResponse.json({ isPlaying: false, debug: { status: response.status, error: errorText } });
     }
 
-    const song = await response.json();
+    const song = typeof response.json === 'function' ? await response.json() : null;
 
-    if (song.item === null) {
+    if (!song || song.item === null) {
         return NextResponse.json({ isPlaying: false });
     }
 
