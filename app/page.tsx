@@ -9,6 +9,20 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-8 flex items-center justify-center">
       <div className="max-w-5xl w-full mx-auto">
+        {/* Profile Picture Section */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white dark:border-zinc-800 shadow-2xl ring-1 ring-zinc-900/5 dark:ring-zinc-100/10 group">
+            {/* Placeholder Image - Using GitHub avatar as it's available and relevant */}
+            <img
+              src="https://github.com/AlexisHCD.png"
+              alt="Foto de Perfil"
+              className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+            />
+            {/* Overlay for elegance */}
+            <div className="absolute inset-0 ring-inset ring-1 ring-black/10 dark:ring-white/10 rounded-full" />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px]">
 
           {/* About Me - Big Box (2x2) */}
