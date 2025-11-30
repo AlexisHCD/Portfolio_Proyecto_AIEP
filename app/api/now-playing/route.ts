@@ -15,7 +15,8 @@ export async function GET() {
     const song = typeof response.json === 'function' ? await response.json() : null;
 
     if (!song || song.item === null) {
-        return NextResponse.json({ isPlaying: false });
+        console.log("Spotify Response (No Item):", song);
+        return NextResponse.json({ isPlaying: false, debug: { message: "No item in response", raw: song } });
     }
 
     const isPlaying = song.is_playing;
