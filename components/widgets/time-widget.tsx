@@ -21,7 +21,15 @@ const getWeatherIcon = (code: number) => {
 
 export const TimeWidget = () => {
     const [time, setTime] = useState<string>("");
-    const { data: weather } = useSWR(WEATHER_API, fetcher, { refreshInterval: 300000 }); // 5 min refresh
+    const { data: weather, error } = useSWR(WEATHER_API, fetcher, {
+        refreshInterval: 300000,
+        onError: (err) => console.error("Weather API Error:", err)
+    });
+
+    useEffect(() => {
+        if (weather) console.log("Weather Data:", weather);
+        if (error) console.error("Weather Error:", error);
+    }, [weather, error]);
 
     useEffect(() => {
         const updateTime = () => {
@@ -66,27 +74,29 @@ export const TimeWidget = () => {
             </div>
 
             {/* Weather Section */}
-            {weather && (
-                <div className="flex flex-col gap-4 z-10">
-                    <div className="flex items-center justify-center gap-4">
-                        {getWeatherIcon(weatherCode)}
-                        <span className="text-4xl font-semibold text-zinc-700 dark:text-zinc-300">
-                            {Math.round(temp)}°
+            <div className="flex flex-col gap-4 z-10">
+                <div className="flex items-center justify-center gap-4">
+                    {weather ? getWeatherIcon(weatherCode) : <Cloud className="w-8 h-8 text-zinc-300 animate-pulse" />}
+                    <span className="text-4xl font-semibold text-zinc-700 dark:text-zinc-300">
+                        {weather ? Math.round(temp) : "--"}°
+                    </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
+                        <span className="text-xs text-zinc-500 uppercase font-medium">Humedad</span>
+                        <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
+                            {weather ? `${humidity}%` : "--"}
                         </span>
                     </div>
-
-                    <div className="grid grid-cols-2 gap-2 mt-2">
-                        <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
-                            <span className="text-xs text-zinc-500 uppercase font-medium">Humedad</span>
-                            <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">{humidity}%</span>
-                        </div>
-                        <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
-                            <span className="text-xs text-zinc-500 uppercase font-medium">Viento</span>
-                            <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">{Math.round(wind)} km/h</span>
-                        </div>
+                    <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
+                        <span className="text-xs text-zinc-500 uppercase font-medium">Viento</span>
+                        <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
+                            {weather ? `${Math.round(wind)} km/h` : "--"}
+                        </span>
                     </div>
                 </div>
-            )}
+            </div>
 
             {/* Background Decoration */}
             <div className="absolute -bottom-10 -right-10 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
