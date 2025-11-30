@@ -15,7 +15,7 @@ const XLogo = ({ className }: { className?: string }) => (
 export const SocialCard = () => {
     return (
         <motion.a
-            href="https://twitter.com"
+            href="https://twitter.com/mkeled"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full h-full bg-black rounded-3xl p-6 group cursor-pointer"

@@ -2,22 +2,28 @@ import { ProjectCard } from "@/components/widgets/project-card";
 
 const projects = [
     {
-        title: "Portafolio Personal",
-        description: "Mi portafolio personal construido con Next.js 14, Tailwind CSS y Framer Motion. Diseño estilo Bento Grid.",
-        tags: ["Next.js", "React", "Tailwind", "TypeScript"],
-        githubUrl: "https://github.com/adhca/portfolio", // Placeholder
+        title: "Portafolio Web Personal",
+        description: "Construido con Next.js 14, Tailwind CSS y React. Diseño estilo Bento Grid.",
+        tags: ["Next.js", "React", "Tailwind", "TypeScript", "React"],
+        githubUrl: "https://github.com/AlexisHCD/Portfolio_Proyecto_AIEP",
     },
     {
-        title: "Gestor de Tareas",
-        description: "Aplicación de lista de tareas con persistencia local y categorías personalizables.",
-        tags: ["React", "Vite", "LocalStorage"],
-        githubUrl: "https://github.com/adhca/todo-app", // Placeholder
+        title: "Instituto Codice",
+        description: "Proyecto Monolitico 4 capas construido con C# .NET y MySQL.",
+        tags: ["C#", " .NET", "MySQL"],
+        githubUrl: "https://github.com/AlexisHCD/RGIVCodice",
     },
     {
-        title: "Calculadora de Notas",
-        description: "Herramienta para estudiantes que permite calcular promedios y notas necesarias para aprobar.",
-        tags: ["JavaScript", "HTML", "CSS"],
-        githubUrl: "https://github.com/adhca/grade-calc", // Placeholder
+        title: "Proyecto Cabañas - Frontend",
+        description: "Construido con Flutter y Dart junto a mi compañero de proyecto.",
+        tags: ["Flutter", "Dart"],
+        githubUrl: "https://github.com/Ansesies/proyecto-coef-2-frontend",
+    },
+    {
+        title: "Proyecto Cabañas - Backend",
+        description: "Backend construido con C# .NET y Postgres junto a mi compañero de proyecto.",
+        tags: ["C#", " .NET", "Postgres"],
+        githubUrl: "https://github.com/Ansesies/proyecto-coef-2-backend",
     },
 ];
 
