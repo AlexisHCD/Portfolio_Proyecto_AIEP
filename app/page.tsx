@@ -18,17 +18,17 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-100 mb-4">
-                Hola, soy <span className="text-blue-600">Adhca</span>.
+                Soy <span className="text-blue-600">Alexis Hernández C.</span>
               </h1>
               <p className="text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Soy estudiante de primer año apasionado por la lógica y React.
-                Construyendo el futuro, un componente a la vez.
+                Soy estudiante de Programación y Analisis de Sistemas de primer año, aprendiendo el desarrollo de software y buscando la innovación.
+                Tambien me gusta la musica, los videojuegos y la tecnología, en mis tiempos libres escucho música y cocino.
+
               </p>
             </div>
             <div className="flex gap-2 mt-4">
-              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">TypeScript</div>
-              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">Next.js</div>
-              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">Tailwind</div>
+              <div className="px-3 py-1 bg-zinc-100 dark:bg-zinc-800 rounded-full text-xs font-medium text-zinc-600 dark:text-zinc-400">Desarrollador y Analista de Sistemas</div>
+
             </div>
           </div>
 

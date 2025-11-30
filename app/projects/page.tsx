@@ -8,7 +8,7 @@ const projects = [
         githubUrl: "https://github.com/AlexisHCD/Portfolio_Proyecto_AIEP",
     },
     {
-        title: "Instituto Codice",
+        title: "Gestor de Alumnos - Instituto Codice",
         description: "Proyecto Monolitico 4 capas construido con C# .NET y MySQL.",
         tags: ["C#", " .NET", "MySQL"],
         githubUrl: "https://github.com/AlexisHCD/RGIVCodice",

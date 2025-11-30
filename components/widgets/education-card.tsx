@@ -14,13 +14,13 @@ export const EducationCard = () => {
 
             <div className="mt-4">
                 <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
-                    Analista Programador
+                    Programador y Analista De Sistemas
                 </h3>
                 <p className="text-sm text-zinc-500 dark:text-zinc-400">
                     1er Año
                 </p>
                 <p className="mt-2 text-xs font-medium text-zinc-400 dark:text-zinc-500 uppercase tracking-wider">
-                    Nombre de mi Instituto
+                    Instituto Profesional AIEP
                 </p>
             </div>
         </div>
