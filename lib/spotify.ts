@@ -34,7 +34,7 @@ export const getNowPlaying = async () => {
 
   if (tokenData.error || !tokenData.access_token) {
     console.error("Failed to get access token:", tokenData);
-    return { status: 401, text: () => Promise.resolve(JSON.stringify(tokenData)) };
+    return new Response(JSON.stringify(tokenData), { status: 401 });
   }
 
   const { access_token } = tokenData;

@@ -12,7 +12,7 @@ export async function GET() {
         return NextResponse.json({ isPlaying: false, debug: { status: response.status, error: errorText } });
     }
 
-    const song = typeof response.json === 'function' ? await response.json() : null;
+    const song = await response.json();
 
     if (!song || song.item === null) {
         console.log("Spotify Response (No Item):", song);
