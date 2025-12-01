@@ -20,7 +20,7 @@ export const DownloadCV = () => {
                 <Download className="w-4 h-4" />
             </div>
 
-            <span className="relative">Descargar Curriculum Vitae</span>
+            <span className="relative">Descargar CV</span>
 
             {/* Shine Effect */}
             <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
