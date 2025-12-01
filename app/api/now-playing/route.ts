@@ -7,9 +7,6 @@ export async function GET() {
     try {
         const response = await getNowPlaying();
 
-        // Log status for debugging
-        console.log("Spotify API Status:", response.status);
-
         if (response.status === 204 || response.status > 400) {
             const errorText = await response.text().catch(() => "No content");
             console.error("Spotify API Error/No Content:", response.status, errorText);
