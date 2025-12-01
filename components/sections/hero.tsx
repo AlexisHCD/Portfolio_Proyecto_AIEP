@@ -8,10 +8,10 @@ export const Hero = () => {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
             >
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
-                    Alexis Hernández
+                    Alexis Hernández Camus
                 </h1>
             </motion.div>
 
