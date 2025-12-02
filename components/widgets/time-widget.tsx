@@ -9,7 +9,7 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 // San Antonio, Chile coordinates
 const LAT = -33.5959;
 const LON = -71.6142;
-const WEATHER_API = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code&timezone=auto`;
+const WEATHER_API = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,weather_code&timezone=auto`;
 
 const getWeatherIcon = (code: number) => {
     if (code === 0) return <Sun className="w-8 h-8 text-yellow-500" />;
@@ -56,8 +56,6 @@ export const TimeWidget = () => {
 
     const current = weather?.current;
     const temp = current?.temperature_2m;
-    const humidity = current?.relative_humidity_2m;
-    const wind = current?.wind_speed_10m;
     const weatherCode = current?.weather_code;
 
     return (
@@ -82,20 +80,7 @@ export const TimeWidget = () => {
                     </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
-                        <span className="text-xs text-zinc-500 uppercase font-medium">Humedad</span>
-                        <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
-                            {weather ? `${humidity}%` : "--"}
-                        </span>
-                    </div>
-                    <div className="bg-zinc-50 dark:bg-zinc-800/50 rounded-2xl p-3 flex flex-col items-center justify-center text-center">
-                        <span className="text-xs text-zinc-500 uppercase font-medium">Viento</span>
-                        <span className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
-                            {weather ? `${Math.round(wind)} km/h` : "--"}
-                        </span>
-                    </div>
-                </div>
+
             </div>
 
             {/* Background Decoration */}
