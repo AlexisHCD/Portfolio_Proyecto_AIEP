@@ -44,11 +44,11 @@ export const Header = () => {
                         </Link>
                     );
                 })}
-            </nav>
 
-            <div className="absolute right-4 top-4 md:right-6 md:top-6 pointer-events-auto">
-                <ThemeToggle />
-            </div>
+                <div className="pl-1 md:pl-2 border-l border-zinc-200 dark:border-zinc-700 ml-1 md:ml-2">
+                    <ThemeToggle />
+                </div>
+            </nav>
         </header>
     );
 };
