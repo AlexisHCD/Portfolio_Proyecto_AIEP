@@ -46,7 +46,7 @@ export const Header = () => {
                 })}
             </nav>
 
-            <div className="absolute right-6 top-6 pointer-events-auto">
+            <div className="absolute right-4 top-4 md:right-6 md:top-6 pointer-events-auto">
                 <ThemeToggle />
             </div>
         </header>
