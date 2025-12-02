@@ -12,12 +12,14 @@ const navItems = [
     { name: "Contacto", path: "/contact" },
 ];
 
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+
 export const Header = () => {
     const pathname = usePathname();
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
-            <nav className="flex items-center gap-2 p-2 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-full border border-zinc-200 dark:border-zinc-800 shadow-sm">
+        <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 pointer-events-none">
+            <nav className="flex items-center gap-2 p-2 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md rounded-full border border-zinc-200 dark:border-zinc-800 shadow-sm pointer-events-auto">
                 {navItems.map((item) => {
                     const isActive = pathname === item.path;
                     return (
@@ -43,6 +45,10 @@ export const Header = () => {
                     );
                 })}
             </nav>
+
+            <div className="absolute right-6 top-6 pointer-events-auto">
+                <ThemeToggle />
+            </div>
         </header>
     );
 };
